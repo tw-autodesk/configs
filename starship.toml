@@ -1,0 +1,12 @@
+# sets timeout for starship when executing commands
+command_timeout = 3000
+
+# sets timeout for starship when scanning files
+scan_timeout = 100
+
+# Inserts a blank line between shell prompts
+add_newline = false
+
+# puts cursor on same line as prompt
+[line_break]
+disabled = true
