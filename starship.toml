@@ -1,8 +1,8 @@
 # sets timeout for starship when executing commands
-command_timeout = 3000
+command_timeout = 10000
 
 # sets timeout for starship when scanning files
-scan_timeout = 100
+scan_timeout = 3000
 
 # Inserts a blank line between shell prompts
 add_newline = false

@@ -1,0 +1,22 @@
+
+alias aws-login="source ~/aws-login.sh"
+
+# neovim
+alias v="nvim"
+alias vi="nvim"
+alias vim="nvim"
+
+# java
+alias java21="export JAVA_HOME=`/usr/libexec/java_home -v 21`; java -version"
+alias java17="export JAVA_HOME=`/usr/libexec/java_home -v 17`; java -version"
+alias java11="export JAVA_HOME=`/usr/libexec/java_home -v 11`; java -version"
+
+# lsd
+alias ls='lsd'
+alias l='ls -l'
+alias la='ls -a'
+alias lla='ls -la'
+alias lt='ls --tree'
+
+# terraform
+alias tf='terraform'

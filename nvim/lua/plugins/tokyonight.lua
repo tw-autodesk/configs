@@ -10,14 +10,8 @@ return {
 
       ---@class colors
       opts.on_colors = function(colors)
-        colors.fg_gutter = util.lighten(colors.bg, 0.68)
+        colors.fg_gutter = util.lighten(colors.bg, 0.6)
       end
     end,
-  },
-  {
-    "LazyVim/LazyVim",
-    opts = {
-      colorscheme = "tokyonight",
-    },
   },
 }
