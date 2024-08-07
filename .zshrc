@@ -19,6 +19,8 @@ eval "$(pyenv init -)"
 eval "$(gh copilot alias -- zsh)"
 
 # fzf
+eval "$(fzf --zsh)"
+
 export FZF_DEFAULT_COMMAND='fd --type file --hidden --no-ignore'
 export FZF_DEFAULT_OPTS='\
   --height=40% \
@@ -29,9 +31,6 @@ export FZF_DEFAULT_OPTS='\
   --color=marker:#b4befe,fg+:#cdd6f4,prompt:#cba6f7,hl+:#f38ba8 \
   --color=selected-bg:#45475a \
   --multi'
-
-eval "$(fzf --zsh)"
-
 
 # zoxide
 eval "$(zoxide init zsh)"
@@ -61,7 +60,7 @@ setopt HIST_SAVE_NO_DUPS         # Do not write a duplicate event to the history
 source ~/.config/zsh-syntax-highlighting/themes/catppuccin_mocha-zsh-syntax-highlighting.zsh
 
 # zsh plugins
-source $(brew --prefix)/zsh-autosuggestions/zsh-autosuggestions.zsh
+source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 # always source the plugins below at the end
-source $(brew --prefix)/zsh-history-substring-search/zsh-history-substring-search.zsh
+source $(brew --prefix)/share/zsh-history-substring-search/zsh-history-substring-search.zsh
 source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
