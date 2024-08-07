@@ -8,8 +8,8 @@ local config = wezterm.config_builder()
 local position_x = "5%"
 local position_y = "6%"
 
-config.color_scheme = "tokyonight_night"
-config.window_background_opacity = 0.96
+config.color_scheme = "Catppuccin Mocha"
+config.window_background_opacity = 0.93
 config.initial_rows = 95
 config.initial_cols = 390
 config.audible_bell = "Disabled"

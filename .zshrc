@@ -19,10 +19,19 @@ eval "$(pyenv init -)"
 eval "$(gh copilot alias -- zsh)"
 
 # fzf
+export FZF_DEFAULT_COMMAND='fd --type file --hidden --no-ignore'
+export FZF_DEFAULT_OPTS='\
+  --height=40% \
+  --layout=reverse \
+  --border \
+  --color=bg+:#313244,bg:#1e1e2e,spinner:#f5e0dc,hl:#f38ba8 \
+  --color=fg:#cdd6f4,header:#f38ba8,info:#cba6f7,pointer:#f5e0dc \
+  --color=marker:#b4befe,fg+:#cdd6f4,prompt:#cba6f7,hl+:#f38ba8 \
+  --color=selected-bg:#45475a \
+  --multi'
+
 eval "$(fzf --zsh)"
 
-export FZF_DEFAULT_COMMAND='fd --type file --hidden --no-ignore'
-export FZF_DEFAULT_OPTS='--height=40% --layout=reverse --border'
 
 # zoxide
 eval "$(zoxide init zsh)"
@@ -42,14 +51,17 @@ setopt HIST_IGNORE_DUPS          # Do not record an event that was just recorded
 setopt HIST_IGNORE_SPACE         # Do not record an event starting with a space.
 setopt HIST_SAVE_NO_DUPS         # Do not write a duplicate event to the history file.
 
-# zsh plugins
-source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
-# always source the plugins below at the end
-source /usr/local/share/zsh-history-substring-search/zsh-history-substring-search.zsh
-
 # aliases
-[[ -f ~/.config/zsh/.aliases ]] && source ~/.config/zsh/.aliases
+[[ -f ~/.aliases ]] && source ~/.aliases
 
 # keymaps
-[[ -f ~/.config/zsh/.keymaps ]] && source ~/.config/zsh/.keymaps 
+[[ -f ~/.keymaps ]] && source ~/.keymaps
 
+# zsh themes
+source ~/.config/zsh-syntax-highlighting/themes/catppuccin_mocha-zsh-syntax-highlighting.zsh
+
+# zsh plugins
+source $(brew --prefix)/zsh-autosuggestions/zsh-autosuggestions.zsh
+# always source the plugins below at the end
+source $(brew --prefix)/zsh-history-substring-search/zsh-history-substring-search.zsh
+source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh

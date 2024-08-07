@@ -1,5 +1,9 @@
 
+#scripts
 alias aws-login="source ~/aws-login.sh"
+
+# bat
+alias cat='bat'
 
 # neovim
 alias v="nvim"
